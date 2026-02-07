@@ -1463,7 +1463,6 @@ window.__require = function e(t, i, o) {
                                     o.showTime -= 1 / 60, s <= r.App.gameData.expDrawScope ? i(s, o) : o.showTime < 0 && r.App.pool.putNode(o)
                                 }
                 }, t.prototype.onAtkPlayer = function (e) {
-                    return // 改
                     var t = e.harm || 0;
                     this._playerScript && this._playerScript.onBeAssaulted(t)
                 }, t.prototype.onRefreshBossBar = function (e) {
@@ -2197,8 +2196,7 @@ window.__require = function e(t, i, o) {
                     } else o = Math.pow(1.1, i), a = Math.pow(1.15, 0);
                     var c = Math.trunc(this._monsterData.hp * o),
                         h = Math.trunc(c * a);
-                    this.HpCount = h, this._hp = 1, this._AtkHarm = Math.trunc(this._monsterData.harm), this._HitCD = 0, this._CD = this._monsterData.atkCd, this._AtkCD = 0, this.onRefreshAni(), this.onRefreshHpBar(), this.setMonsterSize() // 改
-                    // this.HpCount = h, this._hp = this.HpCount, this._AtkHarm = Math.trunc(this._monsterData.harm), this._HitCD = 0, this._CD = this._monsterData.atkCd, this._AtkCD = 0, this.onRefreshAni(), this.onRefreshHpBar(), this.setMonsterSize()
+                    this.HpCount = h, this._hp = this.HpCount, this._AtkHarm = Math.trunc(this._monsterData.harm), this._HitCD = 0, this._CD = this._monsterData.atkCd, this._AtkCD = 0, this.onRefreshAni(), this.onRefreshHpBar(), this.setMonsterSize()
                 }, t.prototype.update = function (e) {
                     var t = this;
                     if (p.GameData.startGame && !p.GameData.endGame && !p.GameData.pauseGame && (this._updateTime += 1, this._updateTime >= 6 && (this._updateTime = 0, this.onRefreshAni()), this._monsterState == s.LifeState.Accrue && this._AniBornFrame >= this._AniBornFrameNum)) {
